@@ -3,7 +3,7 @@ FROM node:latest
 MAINTAINER Yang Leijun <yang.leijun@gmail.com>
 
 # Install Bower & Gulp
-RUN npm install -g bower gulp yo sero-cli generator-material-react
+RUN npm install -g bower gulp yo --allow-root sero-cli generator-material-react
 
 # Define working directory.
 WORKDIR /workspace
