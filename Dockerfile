@@ -6,6 +6,7 @@ MAINTAINER Yang Leijun <yang.leijun@gmail.com>
 RUN npm install -g bower gulp yo --allow-root sero-cli generator-material-react
 
 ADD exercise /exercise
+RUN cd /exercise && npm install
 
 # Define working directory.
 WORKDIR /workspace
