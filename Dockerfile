@@ -33,7 +33,7 @@ ADD . /app
 # Add volumes
 RUN mkdir /workspace
 RUN cp -r /exercise/* /workspace
-RUN cd /workspace && npm install
+RUN cd /workspace && npm install --dev && npm install
 VOLUME /workspace
 
 # ------------------------------------------------------------------------------
