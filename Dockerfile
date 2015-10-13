@@ -38,9 +38,10 @@ VOLUME /workspace
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# ------------------------------------------------------------------------------
-# Expose ports.
-EXPOSE 3131 8080
+# ------------------------------------------------------------------------------ # Expose ports. 
+EXPOSE 80
+EXPOSE 8080
+EXPOSE 3000
 
 # ------------------------------------------------------------------------------
 # Start supervisor, define default command.
