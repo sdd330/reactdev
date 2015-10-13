@@ -3,10 +3,10 @@ FROM node:latest
 MAINTAINER Yang Leijun <yang.leijun@gmail.com>
 
 # Install Libs
-RUN sudo apt-get update && \
-	sudo apt-get install -y supervisor g++ libssl-dev apache2-utils libxml2-dev ruby-full rubygems-integration npm && \
-	sudo gem install sass compass && \
-	sudo npm install -g bower gulp yo --allow-root sero-cli generator-material-react generator-angular grunt-cli forever 
+RUN apt-get update && \
+	apt-get install -y supervisor g++ libssl-dev apache2-utils libxml2-dev ruby-full rubygems-integration npm && \
+	gem install sass compass && \
+	npm install -g bower gulp yo --allow-root sero-cli generator-material-react generator-angular grunt-cli forever 
 
 RUN sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
