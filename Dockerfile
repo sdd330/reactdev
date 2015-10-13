@@ -24,7 +24,7 @@ ADD conf/cloud9.conf /etc/supervisor/conf.d/
 
 # Add ReactJS exercise
 ADD exercise /exercise
-# RUN cd /exercise && npm install
+
 
 # Make dockerfile and README self-contained in image
 ADD . /app
@@ -32,6 +32,8 @@ ADD . /app
 # ------------------------------------------------------------------------------
 # Add volumes
 RUN mkdir /workspace
+RUN cp -r /exercise/* /workspace
+RUN cd /workspace && npm install
 VOLUME /workspace
 
 # ------------------------------------------------------------------------------
